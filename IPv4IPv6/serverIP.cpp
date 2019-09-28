@@ -14,7 +14,7 @@
 /**************************************************************************/
 #define SERVER_PORT     3005
 #define BUFFER_LENGTH    250
-#define FALSE              1
+#define FALSE              0
 
 int main()
 {

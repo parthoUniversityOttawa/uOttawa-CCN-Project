@@ -18,9 +18,9 @@
 /* Constants used by this program                                         */
 /**************************************************************************/
 #define BUFFER_LENGTH    250
-#define FALSE              1
+#define FALSE              0
 //#define SERVER_NAME     "ServerHostName"
-#define SERVER_NAME     "10.0.3.15"
+#define SERVER_NAME     "10.200.69.77"
 #define NETDB_MAX_HOST_NAME_LENGTH 128
 
 /* Pass in 1 parameter which is either the */
