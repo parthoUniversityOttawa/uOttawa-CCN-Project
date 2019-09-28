@@ -1,0 +1,15 @@
+/*
+ * applicationTwo.hpp
+ *
+ *  Created on: Sep 28, 2019
+ *      Author: uottawa
+ */
+
+#ifndef GIT_UOTTAWA_CCN_PROJECT_CHATAPP_INC_APPLICATIONTWO_HPP_
+#define GIT_UOTTAWA_CCN_PROJECT_CHATAPP_INC_APPLICATIONTWO_HPP_
+
+
+
+
+
+#endif /* GIT_UOTTAWA_CCN_PROJECT_CHATAPP_INC_APPLICATIONTWO_HPP_ */
