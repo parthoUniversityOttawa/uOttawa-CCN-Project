@@ -46,8 +46,8 @@ public:
 	bool execute(applicationOne *objPtrHandler);
 	int sendThreadExit(int signo);
 	int receiveThreadExit(int signo);
-
 	void systemIPDisaply();
+	~applicationOne();
 
 /*
  * Member variable declaration

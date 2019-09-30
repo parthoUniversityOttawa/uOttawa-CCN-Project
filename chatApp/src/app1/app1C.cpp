@@ -1,7 +1,10 @@
 
 #include "applicationOne.hpp"
 
-#define PORT 8080 
+ applicationOne::~applicationOne()
+{
+	cout<<"[ALERT]- OBJ DESTORY"<<endl;
+}
 
 void destory(int signo) {
 
@@ -95,6 +98,7 @@ void * applicationOne::recieve(void *arg) {
 			appGoesOffline();
 			break;
 		}
+		memset(buffer,0,1024);
 	}
 }
 
@@ -150,11 +154,15 @@ bool applicationOne::execute(applicationOne *objPtrHandler) {
 int main(int argc, char const *argv[]) {
 
 	if (signal(SIGINT, sig_handler) == SIG_ERR)
+	{
 		cout << "[SYSTEM ERROR] -can't catch SIGINT" << endl;
+	}
 
 	applicationOneOBJ = new applicationOne;
 	applicationOneOBJ->initalize();
 	applicationOneOBJ->execute(applicationOneOBJ);
+
+	//delete(applicationOneOBJ);
 	/*
 	 * Thread create
 	 */

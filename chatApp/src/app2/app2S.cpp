@@ -89,6 +89,7 @@ void * applicationTwo::recieve(void *arg) {
 			appGoesOffline();
 			break;
 		}
+		memset(buffer,0,1024);
 	}
 }
 
