@@ -1,3 +1,24 @@
+/************************************************************************************
+ * University Of Ottawa
+ * Project Presentation for Computer Communications Network.
+ *
+ * This software embodies materials and concepts which are
+ * Used for the sole purpose to demonstrate - TCP- Socket Programming Interface.
+ * Furthermore, This software is capable to perform Full duplex communication in Intra
+ * domain Infrastructure
+ *
+ *
+ * Designed and Developed by Uottawa MEng Students
+ *
+ * file          app2S.cpp
+ * Developers:   Partho Ghosal. (300130532)
+ * 				 Ashwini Upasani (300126565)
+ * 				 Navdeep Kaur Dillon (300108180)
+ * 				 Rahul Ranjan (300124075)
+ *
+ ************************************************************************************/
+
+
 #include "applicationTwo.hpp"
 
 #define PORT 8080
@@ -82,7 +103,7 @@ void * applicationTwo::recieve(void *arg) {
 	while (1) {
 		read(conSocket, buffer, 1024);
 
-		cout << "[INFO] Message from Application 2:" << buffer << endl;
+		cout << "[INFO] Message from Application 1:" << buffer << endl;
 		if (strcmp(buffer, conTerminateReqMsg.c_str()) == 0) {
 			close(conSocket);
 			cout << "[WARN]-Application 2 Requested for Disconnection!" << endl;
@@ -149,7 +170,7 @@ bool applicationTwo::execute(applicationTwo *objPtrHandler) {
 	int i = 0;
 	while (i < 2) {
 		pthread_join(tid[i++], NULL);
-		printf("Thread %d:\n", i);
+		//printf("Thread %d:\n", i);
 	}
 	return SUCCESS;
 }
@@ -159,6 +180,8 @@ int main(int argc, char const *argv[]) {
 	if (signal(SIGINT, sig_handler) == SIG_ERR)
 		cout << "[SYSTEM ERROR] -can't catch SIGINT" << endl;
 
+	cout << "**** Chat Application - {Using TCP Socket API} ***" << endl;
+	cout << "[INFO] - This Is Application 2 (aka Server)" << endl;
 	applicationTwoOBJ = new applicationTwo;
 	applicationTwoOBJ->initalize();
 	applicationTwoOBJ->execute(applicationTwoOBJ);
@@ -167,11 +190,7 @@ int main(int argc, char const *argv[]) {
 	 */
 
 	cout << "Final program termainate" << endl;
-	//close(sock);
-	/*send(sock , hello , strlen(hello) , 0 );
-	 printf("Hello message sent\n");
-	 valread = read( sock , buffer, 1024);
-	 printf("%s\n",buffer ); */
+
 	return 0;
 }
 

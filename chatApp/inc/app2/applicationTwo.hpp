@@ -1,9 +1,22 @@
-/*
- * applicationTwo.hpp
+/************************************************************************************
+ * University Of Ottawa
+ * Project Presentation for Computer Communications Network.
  *
- *  Created on: Sep 28, 2019
- *      Author: uottawa
- */
+ * This software embodies materials and concepts which are
+ * Used for the sole purpose to demonstrate - TCP -Socket Programming Interface.
+ * Furthermore, This software is capable to perform Full duplex communication in Intra
+ * domain Infrastructure
+ *
+ *
+ * Designed and Developed by Uottawa MEng Students
+ *
+ * file          applicationTwo.hpp
+ * Developers:   Partho Ghosal. (300130532)
+ * 				 Ashwini Upasani (300126565)
+ * 				 Navdeep Kaur Dillon (300108180)
+ * 				 Rahul Ranjan (300124075)
+ *
+ ************************************************************************************/
 
 #ifndef UOTTAWA_CCN_PROJECT_CHATAPP_INC_APPLICATIONTWO_HPP_
 #define UOTTAWA_CCN_PROJECT_CHATAPP_INC_APPLICATIONTWO_HPP_

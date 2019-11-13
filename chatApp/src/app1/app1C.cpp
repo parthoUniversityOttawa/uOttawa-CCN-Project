@@ -1,4 +1,25 @@
 
+/************************************************************************************
+ * University Of Ottawa
+ * Project Presentation for Computer Communications Network.
+ *
+ * This software embodies materials and concepts which are
+ * Used for the sole purpose to demonstrate - TCP -Socket Programming Interface.
+ * Furthermore, This software is capable to perform Full duplex communication in Intra
+ * domain Infrastructure
+ *
+ *
+ * Designed and Developed by Uottawa MEng Students
+ *
+ * file          app1C.cpp
+ * Developers:   Partho Ghosal. (300130532)
+ * 				 Ashwini Upasani (300126565)
+ * 				 Navdeep Kaur Dillon (300108180)
+ * 				 Rahul Ranjan (300124075)
+ *
+ ************************************************************************************/
+
+
 #include "applicationOne.hpp"
 
  applicationOne::~applicationOne()
@@ -146,7 +167,7 @@ bool applicationOne::execute(applicationOne *objPtrHandler) {
 	int i = 0;
 	while (i < 2) {
 		pthread_join(tid[i++], NULL);
-		printf("Thread %d:\n", i);
+		//printf("Thread %d:\n", i);
 	}
 	return SUCCESS;
 }
@@ -157,22 +178,14 @@ int main(int argc, char const *argv[]) {
 	{
 		cout << "[SYSTEM ERROR] -can't catch SIGINT" << endl;
 	}
-
+	cout << "**** Chat Application - {Using TCP Socket API} ***" << endl;
+	cout << "[INFO] - This Is Application 1 (aka Client)" << endl;
 	applicationOneOBJ = new applicationOne;
 	applicationOneOBJ->initalize();
 	applicationOneOBJ->execute(applicationOneOBJ);
 
-	//delete(applicationOneOBJ);
-	/*
-	 * Thread create
-	 */
-
 	cout << "Final program termainate" << endl;
-	//close(sock);
-	/*send(sock , hello , strlen(hello) , 0 );
-	 printf("Hello message sent\n");
-	 valread = read( sock , buffer, 1024);
-	 printf("%s\n",buffer ); */
+
 	return 0;
 }
 
