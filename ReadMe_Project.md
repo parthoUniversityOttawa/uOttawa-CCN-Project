@@ -1,4 +1,4 @@
-# Chat Application - using TCP-Socket  *****
+# Chat Application - using TCP-Socket
 
 
 ## Objective:
